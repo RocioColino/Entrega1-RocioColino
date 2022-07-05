@@ -23,5 +23,5 @@ def Restaurantes(self):
 def inicio(request):
     return render(request, "AppCoder/inicio.html")
 
-
+#probando
 
