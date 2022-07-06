@@ -1,12 +1,12 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import *
+from . import views 
 
 
 urlpatterns = [    
-    path('', inicio),
-    path('doctores/', doctores),
-    path('restaurantes/', restaurantes),
-    path('peluquerias/', peluquerias),
+    path('',views.inicio, name="inicio"),
+    path('doctores/', views.doctores, name="doctores"),
+    path('restaurantes/', views.restaurantes, name="restaurantes"),
+    path('peluquerias/',views.peluquerias, name="peluquerias"),
 ]
 
