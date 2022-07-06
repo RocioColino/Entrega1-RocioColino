@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from AppCoder.models import *
 
 def inicio(request):
     return HttpResponse("vista inicio")
@@ -12,4 +13,3 @@ def restaurantes(request):
 
 def peluquerias(request):
     return HttpResponse('vista peluquerias')
-    
