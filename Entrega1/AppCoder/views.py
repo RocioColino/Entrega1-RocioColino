@@ -3,13 +3,14 @@ from django.http import HttpResponse
 from AppCoder.models import *
 
 def inicio(request):
-    return HttpResponse("vista inicio")
+   # return HttpResponse("vista inicio")
+   return render(request, "AppCoder/index.html",{})
 
 def doctores(request):
-    return HttpResponse('vista doctores')
+    return render(request,'AppCoder/doctores.html',{})
 
 def restaurantes(request):
-    return HttpResponse('vista restaurantes')
+    return render(request,'AppCoder/restaurantes.html',{})
 
 def peluquerias(request):
-    return HttpResponse('vista peluquerias')
+    return render(request,'AppCoder/peluquerias.html',{})
