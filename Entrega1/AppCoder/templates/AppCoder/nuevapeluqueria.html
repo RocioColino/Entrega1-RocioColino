@@ -1,0 +1,14 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <h1 class="mb-5">Ingresar peluqueria</h1>
+        <form method="post">
+         {% csrf_token %}
+         {{ form.as_p }}
+        <button>Guardar cambios</button>
+        </form>
+
+
+{% endblock %}

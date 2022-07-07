@@ -7,7 +7,23 @@
     <body>
      <h1>
         LISTADO DE PELUQUERIAS EN LAS QUE OFRECEN SERVICIOS EN INGLES:
+        <a href="{% url 'nuevapeluqueria' %}">Agregar peluqueria</a>
         
+     </h1>
+     <table>
+       <thead>
+           <td>Nombre</td>
+           <td>Telefono</td>
+           <td>Barrio</td>
+       </thead>
+       {% for peluqueria in peluquerias %}
+       <tr>
+           <td>{{ peluqueria.nombre }}</td>
+           <td>{{ peluqueria.telefono }}</td>
+           <td>{{ peluqueria.barrio }}</td>
+       </tr>
+       {% endfor %}
+     </table>
 
      </h1>
 

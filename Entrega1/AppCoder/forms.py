@@ -6,3 +6,8 @@ class NuevoDoctor(forms.ModelForm):
     class Meta:
         model=Doctores
         fields='__all__'
+
+class NuevaPeluqueria(forms.ModelForm):
+    class Meta:
+        model=Peluquerias
+        fields='__all__'
