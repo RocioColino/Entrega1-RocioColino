@@ -7,7 +7,23 @@
     <body>
      <h1>
         LISTADO DE RESTAURANTES QUE OFRECEN SERVICIOS EN INGLES:
+        <a href="{% url 'nuevorestaurante' %}">Agregar restaurante</a>
         
+     </h1>
+     <table>
+       <thead>
+           <td>Nombre</td>
+           <td>Telefono</td>
+           <td>Tipo de comida</td>
+       </thead>
+       {% for restaurante in restaurantes %}
+       <tr>
+           <td>{{ restaurante.nombre }}</td>
+           <td>{{ restaurante.telefono }}</td>
+           <td>{{ restaurante.tipoDeComida }}</td>
+       </tr>
+       {% endfor %}
+     </table>
 
      </h1>
 

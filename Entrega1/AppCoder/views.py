@@ -13,7 +13,8 @@ def doctores(request):
     return render(request,'AppCoder/doctores.html',{"doctores":doctores})
 
 def restaurantes(request):
-    return render(request,'AppCoder/restaurantes.html',{})
+    restaurantes=Restaurantes.objects.all()
+    return render(request,'AppCoder/restaurantes.html',{"restaurantes":restaurantes})
 
 def peluquerias(request):
     peluquerias=Peluquerias.objects.all()
@@ -38,3 +39,13 @@ def nuevapeluqueria(request):
     else: 
         form = NuevaPeluqueria()
     return render(request, 'AppCoder/nuevapeluqueria.html',{"form":form})
+
+def nuevorestaurante(request):
+    if request.method == "POST":
+        form = NuevoRestaurante(request.POST)
+        if form.is_valid:
+            form.save()
+            return redirect('restaurantes')
+    else: 
+        form = NuevoRestaurante()
+    return render(request, 'AppCoder/nuevorestaurante.html',{"form":form})
