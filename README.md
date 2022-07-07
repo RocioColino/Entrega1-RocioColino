@@ -2,7 +2,7 @@
 
 _Alumna: Rocio Colino_
 
-## Comenzando 
+## Objetivo
 
 _El propósito de este proyecto es centralizar una base de datos en la que los extranjeros que vivan (o visitan) Corea del Sur puedan encontrar fácilmente información sobre ciertos servicios que sean brindados en inglés. Esto es en respuesta a una problemática común en Corea del Sur, dónde encontrar servicios en idiomas otros que el coreano es sumamente dificil._
 
@@ -28,21 +28,16 @@ Estas son las categorías mas buscadas por la mayor parte de los extranjeros.
 
 _Cada categoria tiene su propia página en donde se puede ver un listado con la información pertinente._
 
-_Todas las páginas tienen al final de cada listado una opción para agregar una nueva entrada._
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
-
-
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
+_Cada una de las vistas cuenta con una opción de búsqueda y un botón para agregar nuevas entradas._
+```
+Por ejemplo en: http://localhost:8000/appcoder/doctores/ 
+se puede acceder al listado existentes de doctores que ofrecen servicios en inglés.
+En la parte superior de esta vista hay una opción de búsqueda por nombre en la base de datos.
+En la parte inferior, luego de la tabla, se puede acceder a la opción "Agregar doctor".
 
 ```
-Da un ejemplo
-```
+
+
 
 
 ## Construido con 
