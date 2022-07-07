@@ -5,17 +5,24 @@
 {% block contenidoQueCambia %}
 
     <body>
-     <h1>
+      <style>
+        h3{color: rgb(19, 12, 147);}
+    </style>
+     <h3>
+      <br>
         LISTADO DE PELUQUERIAS EN LAS QUE OFRECEN SERVICIOS EN INGLES:
-        <a href="{% url 'nuevapeluqueria' %}">Agregar peluqueria</a>
+       <br>
+       <br> 
         
-     </h1>
-     <table>
-       <thead>
-           <td>Nombre</td>
-           <td>Telefono</td>
-           <td>Barrio</td>
-       </thead>
+     </h3>
+     <table class="table">
+        <thead>
+          <tr>            
+            <th scope="col">Nombre</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Barrio</th>
+          </tr>
+        </thead>
        {% for peluqueria in peluquerias %}
        <tr>
            <td>{{ peluqueria.nombre }}</td>
@@ -24,7 +31,7 @@
        </tr>
        {% endfor %}
      </table>
-
+     <a href="{% url 'nuevapeluqueria' %}">Agregar peluqueria + </a>
      </h1>
 
 

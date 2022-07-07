@@ -5,17 +5,23 @@
 {% block contenidoQueCambia %}
 
     <body>
-     <h1>
-        LISTADO DE RESTAURANTES QUE OFRECEN SERVICIOS EN INGLES:
-        <a href="{% url 'nuevorestaurante' %}">Agregar restaurante</a>
-        
-     </h1>
-     <table>
-       <thead>
-           <td>Nombre</td>
-           <td>Telefono</td>
-           <td>Tipo de comida</td>
-       </thead>
+        <style>
+            h3{color: rgb(19, 12, 147);}
+        </style>
+     <h3>
+        <br>
+        RESTAURANTES QUE OFRECEN SERVICIOS EN INGLES
+       <br>
+        <br>     
+     </h3>
+     <table class="table">
+        <thead>
+          <tr>            
+            <th scope="col">Nombre</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Tipo de Comida</th>
+          </tr>
+        </thead>
        {% for restaurante in restaurantes %}
        <tr>
            <td>{{ restaurante.nombre }}</td>
@@ -24,7 +30,7 @@
        </tr>
        {% endfor %}
      </table>
-
+     <a href="{% url 'nuevorestaurante' %}">Agregar restaurante + </a>
      </h1>
 
 

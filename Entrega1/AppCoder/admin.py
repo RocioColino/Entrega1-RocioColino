@@ -5,3 +5,5 @@ admin.site.register(Peluquerias)
 admin.site.register(Restaurantes)
 admin.site.register(Doctores)
 
+
+    

@@ -5,17 +5,25 @@
 {% block contenidoQueCambia %}
 
     <body>
-     <h1>
-        LISTADO DE DOCTORES QUE OFRECEN SERVICIOS EN INGLES:
-        <a href="{% url 'nuevodoctor' %}">Agregar doctor</a>
+        <style>
+            h3{color: rgb(19, 12, 147);}
+        </style>
+     <h3>
+        <br>
+        DOCTORES QUE OFRECEN SERVICIOS EN INGLES:
+        <br>
+        <br>
         
-     </h1>
-     <table>
+     </h3>
+     <table class="table">
         <thead>
-            <td>Nombre</td>
-            <td>Telefono</td>
-            <td>Especialidad</td>
+          <tr>            
+            <th scope="col">Nombre</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Especialidad</th>
+          </tr>
         </thead>
+       
         {% for doctor in doctores %}
         <tr>
             <td>{{ doctor.nombre }}</td>
@@ -24,7 +32,7 @@
         </tr>
         {% endfor %}
      </table>
-
+     <a href="{% url 'nuevodoctor' %}">Agregar doctor + </a>
 
     </body>
 

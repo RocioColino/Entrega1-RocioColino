@@ -49,3 +49,12 @@ def nuevorestaurante(request):
     else: 
         form = NuevoRestaurante()
     return render(request, 'AppCoder/nuevorestaurante.html',{"form":form})
+
+def busqueda_restaurante(request):
+    if request.method=="POST":
+        restaurantes=request.POST["restaurantes"]
+        restaurantes=restaurantes.objects.filter(restaurantes__icontains=restaurantes)
+        return render(request,"AppCoder/busqueda_restaurante.html", {"restaurantes":restaurantes})
+    else:
+        restaurantes=[]
+    return render(request,"AppCoder/busqueda_restaurante.html", {"restaurantes":restaurantes})
