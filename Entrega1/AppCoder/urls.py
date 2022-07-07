@@ -12,5 +12,8 @@ urlpatterns = [
     path('nuevapeluqueria/', views.nuevapeluqueria, name="nuevapeluqueria"),
     path('nuevorestaurante/', views.nuevorestaurante, name="nuevorestaurante"),
     path('busqueda_restaurante/', views.busqueda_restaurante, name="busqueda_restaurante"),
+    path('busqueda_peluqueria/', views.busqueda_peluqueria, name="busqueda_peluqueria"),
+    path('busqueda_doctor/', views.busqueda_doctor, name="busqueda_doctor"),
+    
 ]
 

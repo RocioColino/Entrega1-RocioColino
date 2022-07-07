@@ -3,11 +3,11 @@
 {% load static %}
 
 {% block tituloPagina %}
-Buscar restaurante
+Buscar peluqueria
 {% endblock %}
 
 {% block contenidoQueCambia %}
-    <p><br> <h4>Buscar restaurante:</h4> 
+    <p> <h4>Buscar peluquería:</h4> 
         <br>
         <form action=""  method="post">
             {% csrf_token %}
@@ -16,10 +16,11 @@ Buscar restaurante
             <input type="Submit" value="Buscar">
         </form>
     </p>>
+    <br>
     <p><h5>Resultado:</h5></p>
         <ul>
-            {% for restaurante in restaurantes %}
-                <li>{{restaurante.nombre}}</li>
+            {% for peluqueria in peluquerias %}
+                <li>{{peluqueria.nombre}}</li>
             {% endfor %}
         </ul>
 {% endblock %}

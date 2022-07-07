@@ -52,9 +52,27 @@ def nuevorestaurante(request):
 
 def busqueda_restaurante(request):
     if request.method=="POST":
-        restaurantes=request.POST["restaurantes"]
-        restaurantes=restaurantes.objects.filter(restaurantes__icontains=restaurantes)
-        return render(request,"AppCoder/busqueda_restaurante.html", {"restaurantes":restaurantes})
-    else:
-        restaurantes=[]
-    return render(request,"AppCoder/busqueda_restaurante.html", {"restaurantes":restaurantes})
+        restaurantes=request.POST["nombre"]
+        resultado=Restaurantes.objects.filter(nombre__icontains=restaurantes)
+        return render(request,"AppCoder/busqueda_restaurante.html", {"restaurantes":resultado})
+   # else:
+     #   resultado=[]
+    return render(request,"AppCoder/busqueda_restaurante.html", {})
+
+def busqueda_peluqueria(request):
+    if request.method=="POST":
+        peluquerias=request.POST["nombre"]
+        resultado=Peluquerias.objects.filter(nombre__icontains=peluquerias)
+        return render(request,"AppCoder/busqueda_peluqueria.html", {"peluquerias":resultado})
+   # else:
+     #   resultado=[]
+    return render(request,"AppCoder/busqueda_peluqueria.html", {})
+
+def busqueda_doctor(request):
+    if request.method=="POST":
+        doctores=request.POST["nombre"]
+        resultado=Doctores.objects.filter(nombre__icontains=doctores)
+        return render(request,"AppCoder/busqueda_doctor.html", {"doctores":resultado})
+   # else:
+     #   resultado=[]
+    return render(request,"AppCoder/busqueda_doctor.html", {})
